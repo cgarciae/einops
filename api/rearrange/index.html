@@ -495,7 +495,7 @@ Find more examples in einops tutorial.</p>
 </tr>
 <tr>
 <td><code>pattern</code></td>
-<td><code></code></td>
+<td><code>str</code></td>
 <td>
 <p>string, rearrangement pattern</p>
 </td>
@@ -531,7 +531,7 @@ Find more examples in einops tutorial.</p>
 <details class="quote">
           <summary>Source code in <code>einops/einops.py</code></summary>
           <div class="highlight">
-<pre><span></span><code><span class="k">def</span> <span class="nf">rearrange</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="o">**</span><span class="n">axes_lengths</span><span class="p">):</span>
+<pre><span></span><code><span class="k">def</span> <span class="nf">rearrange</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">axes_lengths</span><span class="p">):</span>
     <span class="sd">"""</span>
 <span class="sd">    einops.rearrange is a reader-friendly smart element reordering for multidimensional tensors.</span>
 <span class="sd">    This operation includes functionality of transpose (axes permutation), reshape (view), squeeze, unsqueeze,</span>

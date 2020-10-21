@@ -501,15 +501,9 @@ list of tensors is also accepted, those should be of the same type and shape</p>
 <td><code>reduction</code></td>
 <td><code>Union[str, Callable[[tensor, Tuple[int]], tensor]]</code></td>
 <td>
-<p>one of available reductions ('min', 'max', 'sum', 'mean', 'prod'), case-sensitive</p>
-</td>
-<td><em>required</em></td>
-</tr>
-<tr>
-<td><code>This</code></td>
-<td><code>allows using various reductions, examples</code></td>
-<td>
-<p>np.max, tf.reduce_logsumexp, torch.var, etc.</p>
+<p>one of available reductions ('min', 'max', 'sum', 'mean', 'prod'), case-sensitive
+alternatively, a callable f(tensor, reduced_axes) -&gt; tensor can be provided.
+This allows using various reductions, examples: np.max, tf.reduce_logsumexp, torch.var, etc.</p>
 </td>
 <td><em>required</em></td>
 </tr>
@@ -587,8 +581,8 @@ list of tensors is also accepted, those should be of the same type and shape</p>
 <span class="sd">            list of tensors is also accepted, those should be of the same type and shape</span>
 <span class="sd">        pattern: string, reduction pattern</span>
 <span class="sd">        reduction: one of available reductions ('min', 'max', 'sum', 'mean', 'prod'), case-sensitive</span>
-<span class="sd">        alternatively, a callable f(tensor, reduced_axes) -&gt; tensor can be provided.</span>
-<span class="sd">        This allows using various reductions, examples: np.max, tf.reduce_logsumexp, torch.var, etc.</span>
+<span class="sd">            alternatively, a callable f(tensor, reduced_axes) -&gt; tensor can be provided.</span>
+<span class="sd">            This allows using various reductions, examples: np.max, tf.reduce_logsumexp, torch.var, etc.</span>
 <span class="sd">        axes_lengths: any additional specifications for dimensions</span>
 
 <span class="sd">    Returns:</span>
